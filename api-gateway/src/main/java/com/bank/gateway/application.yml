@@ -1,0 +1,32 @@
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+
+      routes:
+
+        # Account Service
+        - id: account-service
+          uri: lb://account-service
+          predicates:
+            - Path=/accounts/**
+
+        # Customer Service
+        - id: customer-service
+          uri: lb://customer-service
+          predicates:
+            - Path=/customers/**
+
+        # Transaction Service (when created)
+        - id: transaction-service
+          uri: lb://transaction-service
+          predicates:
+            - Path=/transactions/**
+
+# Logging (optional)
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
