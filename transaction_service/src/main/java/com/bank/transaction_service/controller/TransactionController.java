@@ -2,7 +2,7 @@ package com.bank.transaction_service.controller;
 
 import com.bank.transaction_service.dto.TransferRequest;
 import com.bank.transaction_service.entity.Transaction;
-import com.bank.transaction.service.TransactionService;
+import com.bank.transaction_service.service.TransactionService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;

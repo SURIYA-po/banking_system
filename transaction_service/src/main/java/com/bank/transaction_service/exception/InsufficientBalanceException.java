@@ -1,0 +1,5 @@
+package com.bank.transaction_service.exception;
+
+public class InsufficientBalanceException extends RuntimeException {
+    public InsufficientBalanceException(String msg) { super(msg); }
+}

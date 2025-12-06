@@ -9,7 +9,7 @@ import com.bank.transaction_service.service.TransactionService;
 import com.bank.transaction_service.exception.InsufficientBalanceException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction_service.annotation.Transactional;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.Instant;
 import java.util.List;
